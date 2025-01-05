@@ -1,0 +1,93 @@
+Django provides several built-in classes to streamline development. These classes can be grouped by functionality, such as views, models, forms, serializers, and authentication. Here's an overview of the most commonly used built-in classes in Django:
+
+1. View Classes
+Django's Core Views:
+View: Base class for all views.
+TemplateView: Renders a template.
+RedirectView: Redirects to a specific URL.
+FormView: Handles form submissions.
+DetailView: Displays a single object.
+ListView: Displays a list of objects.
+CreateView: Handles object creation with forms.
+UpdateView: Handles object updates with forms.
+DeleteView: Handles object deletion.
+Django Rest Framework Views:
+APIView: Base class for RESTful views.
+GenericAPIView: Base for generic class-based views.
+ListAPIView: For listing objects.
+RetrieveAPIView: For retrieving a single object.
+CreateAPIView: For creating objects.
+UpdateAPIView: For updating objects.
+DestroyAPIView: For deleting objects.
+ListCreateAPIView: For listing and creating objects.
+RetrieveUpdateAPIView: For retrieving and updating objects.
+RetrieveDestroyAPIView: For retrieving and deleting objects.
+RetrieveUpdateDestroyAPIView: For retrieving, updating, and deleting objects.
+
+2. Model Classes
+Base Class:
+Model: The base class for defining database models.
+Field Classes:
+Basic Fields:
+CharField, TextField, IntegerField, BooleanField, FloatField, DecimalField, etc.
+Date & Time Fields:
+DateField, TimeField, DateTimeField, DurationField
+Relational Fields:
+ForeignKey, OneToOneField, ManyToManyField
+File Fields:
+FileField, ImageField
+Meta Options:
+Meta: A nested class in a model to define metadata like table names, ordering, etc.
+
+3. Form Classes
+Base Classes:
+Form: Base class for creating forms.
+ModelForm: Auto-generates a form based on a model.
+FormSet: Manages multiple forms.
+ModelFormSet: Manages multiple forms tied to a model.
+Field Classes:
+Basic Fields:
+CharField, IntegerField, BooleanField, etc.
+Specialized Fields:
+ChoiceField, MultipleChoiceField, FileField, ImageField
+
+4. Authentication Classes
+User and Group Management:
+User: Default user model.
+Group: For managing groups of users.
+Permission: For managing object-level permissions.
+Authentication Backends:
+ModelBackend: Default backend for authenticating against User.
+RemoteUserBackend: For authenticating remote users.
+Authentication Views:
+LoginView, LogoutView, PasswordResetView, PasswordChangeView, etc.
+
+5. Middleware Classes
+Django has built-in middleware classes for request/response processing:
+
+CommonMiddleware: Adds useful features like APPEND_SLASH.
+SessionMiddleware: Manages sessions.
+AuthenticationMiddleware: Associates users with requests.
+CSRFViewMiddleware: Protects against Cross-Site Request Forgery.
+MessageMiddleware: Enables temporary messages storage.
+StaticFilesMiddleware: Serves static files in development.
+
+6. Serializer Classes (Django Rest Framework)
+Core Classes:
+Serializer: Base class for creating serializers.
+ModelSerializer: Serializer tied to a model.
+HyperlinkedModelSerializer: Serializer with hyperlinks to object instances.
+Field Classes:
+Basic Fields:
+CharField, IntegerField, BooleanField, DecimalField
+Relational Fields:
+PrimaryKeyRelatedField, SlugRelatedField, HyperlinkedRelatedField
+
+7. Admin Classes
+ModelAdmin: Customizes how models are displayed in the admin interface.
+TabularInline, StackedInline: For managing related objects in admin.
+
+8. Testing Classes
+TestCase: Base class for running tests.
+Client: Simulates HTTP requests for testing.
+RequestFactory: Creates mock requests for unit testing.
